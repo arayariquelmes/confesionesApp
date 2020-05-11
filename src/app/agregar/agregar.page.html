@@ -1,0 +1,29 @@
+<ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-label>Nombre</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="nombre" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Comentario</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-textarea [(ngModel)]="texto" ></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>Carrera</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-select [(ngModel)]="carrera" placeholder="Seleccione Carrera">
+          <ion-select-option>Diseño Web & Mobile</ion-select-option>
+          <ion-select-option>Diseño Gráfico</ion-select-option>
+          <ion-select-option>Analista Programador</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-button (click)="agregar()" color="primary">Agregar</ion-button>
+      </ion-item>
+    </ion-list>
+</ion-content>
