@@ -12,7 +12,7 @@ export class AgregarPage implements OnInit {
   nombre:string;
   texto:string;
   carrera:string;
-
+  esDestacado:boolean;
   constructor(public alertCtrl:AlertController
       ,public comService:ComentariosService) { }
 
@@ -22,7 +22,8 @@ export class AgregarPage implements OnInit {
     let comentario:Comentario = {
       nombre: this.nombre,
       texto: this.texto,
-      carrera: this.carrera
+      carrera: this.carrera,
+      esDestacado:this.esDestacado
     };
     this.comService.agregar(comentario);//Para guardar comentario y mostrarlo en la otra pagina
     const alert = await this.alertCtrl.create({
